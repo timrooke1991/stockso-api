@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticker: MyString
+  name: MyString
+  description: MyText
+  sector: MyString
+  mcap: 1.5
+
+two:
+  ticker: MyString
+  name: MyString
+  description: MyText
+  sector: MyString
+  mcap: 1.5
