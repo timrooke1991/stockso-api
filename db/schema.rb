@@ -17,20 +17,16 @@ ActiveRecord::Schema.define(version: 20171215210653) do
     t.string "body"
     t.string "sentiment"
     t.boolean "holder"
-    t.integer "share_id"
+    t.integer "stock_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["share_id"], name: "index_posts_on_share_id"
+    t.index ["stock_id"], name: "index_posts_on_stock_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "shares", force: :cascade do |t|
     t.string "ticker"
-    t.string "name"
-    t.text "description"
-    t.string "sector"
-    t.float "mcap"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
