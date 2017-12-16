@@ -10,25 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021212408) do
+ActiveRecord::Schema.define(version: 20171215210653) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.string "sentiment"
     t.boolean "holder"
-    t.integer "stock_id"
+    t.integer "share_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["stock_id"], name: "index_posts_on_stock_id"
+    t.index ["share_id"], name: "index_posts_on_share_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "stocks", force: :cascade do |t|
+  create_table "shares", force: :cascade do |t|
     t.string "ticker"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "name"
+    t.text "description"
+    t.string "sector"
+    t.float "mcap"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -27,6 +27,7 @@ gem 'rack-cors'
 gem 'active_model_serializers'
 
 gem 'market_beat'
+gem 'stock_quote'
 gem 'nokogiri'
 gem 'mechanize'
 
